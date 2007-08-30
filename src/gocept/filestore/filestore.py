@@ -20,6 +20,8 @@ class FileStore(object):
         self.path = path
 
     def prepare(self):
+        if not os.path.isdir(self.path):
+            os.mkdir(self.path)
         for dir in self.sub_dirs:
             dir = os.path.join(self.path, dir)
             if not os.path.exists(dir):
