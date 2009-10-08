@@ -4,6 +4,7 @@
 
 import os
 import os.path
+import shutil
 
 import zope.interface
 
@@ -34,6 +35,12 @@ class FileStore(object):
         path = os.path.join(self.path, 'tmp', filename)
         f = file(path, mode)
         return f
+
+    def copy(self, filename, source, destination):
+        filename = os.path.basename(filename)
+        source_path = os.path.join(self.path, source, filename)
+        dest_path = os.path.join(self.path, destination, filename)
+        shutil.copy(source_path, dest_path)
 
     def move(self, filename, source, destination):
         filename = os.path.basename(filename)

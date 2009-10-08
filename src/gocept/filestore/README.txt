@@ -30,13 +30,13 @@ Before using the store we need to prepare it:
 
 Prepare has created the tmp/new/cur directory structure:
 
->>> os.listdir(store_dir)
+>>> sorted(os.listdir(store_dir))
 ['cur', 'new', 'tmp']
 
 Calling prepare again does nothing:
 
 >>> filestore.prepare()
->>> os.listdir(store_dir)
+>>> sorted(os.listdir(store_dir))
 ['cur', 'new', 'tmp']
 
 
@@ -80,6 +80,18 @@ processes "sees" the file it can directly work with it and move it to 'cur':
 []
 >>> filestore.list('cur')
 ['.../cur/a-file']
+
+Files can be copied, too:
+
+>>> filestore.copy('a-file', 'cur', 'tmp')
+>>> filestore.list('cur')
+['.../cur/a-file']
+>>> filestore.list('tmp')
+['.../tmp/a-file']
+
+
+Cleanup
+=======
 
 Remove the temporary directory after testing:
 
