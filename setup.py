@@ -9,7 +9,7 @@ from setuptools import setup, find_packages
 
 setup(
     name = 'gocept.filestore',
-    version = "0.2",
+    version = '0.3',
     author = "Christian Zagrodnick",
     author_email = "cz@gocept.com",
     description = "Provides mdildir like access to files",
