@@ -1,4 +1,4 @@
-# Copyright (c) 2007 gocept gmbh & co. kg
+# Copyright (c) 2007-2014 gocept gmbh & co. kg
 # See also LICENSE.txt
 # $Id$
 
@@ -13,7 +13,7 @@ setup(
     author = "Christian Zagrodnick",
     author_email = "cz@gocept.com",
     description = "Provides maildir like access to files",
-    long_description = file(os.path.join(os.path.dirname(__file__),
+    long_description = open(os.path.join(os.path.dirname(__file__),
                                          'src', 'gocept', 'filestore',
                                          'README.txt')).read(),
     license = "ZPL 2.1",
