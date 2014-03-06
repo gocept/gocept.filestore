@@ -49,8 +49,10 @@ Adding files to the store works with the `create` method:
 
 Files are created in the 'tmp' area with the 'w' mode (if not specified):
 
->>> f
-<open file '.../tmp/a-file', mode 'w' at 0x...>
+>>> f.name
+'.../tmp/a-file'
+>>> f.mode
+'w'
 
 We find the file in the tmp area. Note that `filestore.list` lists files with
 their full path names, so we could feed the name directly to file/open:
@@ -60,7 +62,7 @@ their full path names, so we could feed the name directly to file/open:
 
 We got a plain file back, so write to it:
 
->>> f.write('Die Ente bleibt draussen!')
+>>> _ = f.write('Die Ente bleibt draussen!')
 >>> f.close()
 
 We have finished writing our file, so we can move it to the `new` space for

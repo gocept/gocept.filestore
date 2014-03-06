@@ -1,4 +1,4 @@
-# Copyright (c) 2006-2007 gocept gmbh & co. kg
+# Copyright (c) 2006-2014 gocept gmbh & co. kg
 # See also LICENSE.txt
 # $Id$
 
@@ -11,9 +11,8 @@ import zope.interface
 import gocept.filestore.interfaces
 
 
+@zope.interface.implementer(gocept.filestore.interfaces.IFileStore)
 class FileStore(object):
-
-    zope.interface.implements(gocept.filestore.interfaces.IFileStore)
 
     sub_dirs = ('tmp', 'new', 'cur')
 
@@ -33,7 +32,7 @@ class FileStore(object):
 
     def create(self, filename, mode='w'):
         path = os.path.join(self.path, 'tmp', filename)
-        f = file(path, mode)
+        f = open(path, mode)
         return f
 
     def copy(self, filename, source, destination):
