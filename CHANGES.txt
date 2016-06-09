@@ -5,6 +5,8 @@ CHANGES
 0.4 (unreleased)
 ----------------
 
+- Migrate repository to Bitbucket.
+
 - Made Python 3 compatible (tested with both Python 2.7 and 3.3 now).
 
 
