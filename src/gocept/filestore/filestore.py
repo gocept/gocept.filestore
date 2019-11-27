@@ -26,9 +26,6 @@ class FileStore(object):
             dir = os.path.join(self.path, dir)
             if not os.path.exists(dir):
                 os.mkdir(dir)
-            if not os.path.isdir(dir):
-                raise RuntimeError("Could create directory %r, "
-                                   "something is in the way." % dir)
 
     def create(self, filename, mode='w'):
         path = os.path.join(self.path, 'tmp', filename)
