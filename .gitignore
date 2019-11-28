@@ -1,7 +1,6 @@
+*.pyc
+*.egg-info
+__pycache__
 .eggs/
 .tox/
-src/gocept.filestore.egg-info/
-src/gocept/__init__.pyc
-src/gocept/__pycache__/
 .coverage
-src/gocept/filestore/__pycache__/
