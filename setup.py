@@ -1,9 +1,8 @@
-import os.path
+# coding: UTF-8
 
 from setuptools import setup, find_packages
+import os.path
 
-
-TESTS_REQUIRE = ['zope.testing', 'zope.testrunner']
 
 setup(
     name='gocept.filestore',
@@ -16,6 +15,24 @@ setup(
                                        'src', 'gocept', 'filestore',
                                        'README.txt')).read(),
     license="ZPL 2.1",
+    classifiers="""\
+License :: OSI Approved
+License :: OSI Approved :: Zope Public License
+Programming Language :: Python
+Programming Language :: Python :: 2
+Programming Language :: Python :: 2.7
+Programming Language :: Python :: 3
+Programming Language :: Python :: 3.7
+Programming Language :: Python :: 3.8
+Development Status :: 5 - Production/Stable
+Intended Audience :: Developers
+Natural Language :: English
+Operating System :: OS Independent
+Topic :: Software Development
+Topic :: Software Development :: Libraries
+Topic :: Software Development :: Libraries :: Python Modules
+Topic :: Utilities
+""".splitlines(),
     packages=find_packages('src'),
     package_dir={'': 'src'},
     include_package_data=True,
@@ -27,6 +44,8 @@ setup(
         'zope.interface',
     ],
     extras_require={
-        'test': TESTS_REQUIRE,
+        'test': [
+            'zope.testing',
+            'zope.testrunner'],
     },
 )
