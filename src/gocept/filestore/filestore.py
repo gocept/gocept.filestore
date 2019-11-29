@@ -1,14 +1,10 @@
-# Copyright (c) 2006-2019 gocept gmbh & co. kg
-# See also LICENSE.txt
-# $Id$
+# coding: UTF-8
 
+import gocept.filestore.interfaces
 import os
 import os.path
 import shutil
-
 import zope.interface
-
-import gocept.filestore.interfaces
 
 
 @zope.interface.implementer(gocept.filestore.interfaces.IFileStore)
@@ -51,4 +47,4 @@ class FileStore(object):
     def list(self, section):
         path = os.path.join(self.path, section)
         return [os.path.join(self.path, section, path)
-                for path in  os.listdir(path)]
+                for path in os.listdir(path)]

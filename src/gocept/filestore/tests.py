@@ -1,10 +1,8 @@
-# Copyright (c) 2006-2019 gocept gmbh & co. kg
-# See also LICENSE.txt
-# $Id$
-
-import unittest
+# coding: UTF-8
 
 import doctest
+import unittest
+
 
 def test_suite():
     suite = unittest.TestSuite()

@@ -1,6 +1,4 @@
-# Copyright (c) 2006-2019 gocept gmbh & co. kg
-# See also LICENSE.txt
-# $Id$
+# coding: UTF-8
 
 import zope.interface
 
