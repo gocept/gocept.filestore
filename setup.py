@@ -33,6 +33,7 @@ Topic :: Software Development :: Libraries
 Topic :: Software Development :: Libraries :: Python Modules
 Topic :: Utilities
 """.splitlines(),
+    keywords='filesystem consistency',
     packages=find_packages('src'),
     package_dir={'': 'src'},
     include_package_data=True,
