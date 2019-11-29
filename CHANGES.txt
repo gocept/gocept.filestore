@@ -7,7 +7,13 @@ CHANGES
 
 - Migrate repository to Bitbucket.
 
-- Made Python 3 compatible (tested with both Python 2.7 and 3.3 now).
+- Migrate repository to github.
+
+- Made Python 3 compatible (tested with Python 2.7, 3.7 and 3.8).
+
+- Replace bootstrap/buildout with tox.
+
+- Increase test coverage to 100%.
 
 
 0.3 (2009-10-08)

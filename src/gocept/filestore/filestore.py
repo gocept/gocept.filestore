@@ -1,14 +1,10 @@
-# Copyright (c) 2006-2014 gocept gmbh & co. kg
-# See also LICENSE.txt
-# $Id$
+# coding: UTF-8
 
+import gocept.filestore.interfaces
 import os
 import os.path
 import shutil
-
 import zope.interface
-
-import gocept.filestore.interfaces
 
 
 @zope.interface.implementer(gocept.filestore.interfaces.IFileStore)
@@ -26,9 +22,6 @@ class FileStore(object):
             dir = os.path.join(self.path, dir)
             if not os.path.exists(dir):
                 os.mkdir(dir)
-            if not os.path.isdir(dir):
-                raise RuntimeError("Could create directory %r, "
-                                   "something is in the way." % dir)
 
     def create(self, filename, mode='w'):
         path = os.path.join(self.path, 'tmp', filename)
@@ -54,4 +47,4 @@ class FileStore(object):
     def list(self, section):
         path = os.path.join(self.path, section)
         return [os.path.join(self.path, section, path)
-                for path in  os.listdir(path)]
+                for path in os.listdir(path)]

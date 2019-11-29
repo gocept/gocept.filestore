@@ -1,10 +1,8 @@
-# Copyright (c) 2007 gocept gmbh & co. kg
-# See also LICENSE.txt
-# $Id$
+# coding: UTF-8
 
+import doctest
 import unittest
 
-from zope.testing import doctest
 
 def test_suite():
     suite = unittest.TestSuite()

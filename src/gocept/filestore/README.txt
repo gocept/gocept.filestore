@@ -11,8 +11,10 @@ Initialize a FileStore
 
 Create a filestore in a temporary area:
 
->>> import tempfile
->>> store_dir = tempfile.mkdtemp()
+>>> import tempfile, os
+>>> temp_dir = tempfile.mkdtemp()
+>>> store_dir = os.path.join(temp_dir, 'store1')
+>>> os.mkdir(store_dir)
 >>> from gocept.filestore import FileStore
 >>> filestore = FileStore(store_dir)
 >>> filestore
@@ -36,6 +38,18 @@ Prepare has created the tmp/new/cur directory structure:
 Calling prepare again does nothing:
 
 >>> filestore.prepare()
+>>> sorted(os.listdir(store_dir))
+['cur', 'new', 'tmp']
+
+If the store_dir is removed, it is created again by calling prepare.
+
+>>> import shutil
+>>> shutil.rmtree(store_dir)
+>>> os.listdir(temp_dir)
+[]
+>>> filestore.prepare()
+>>> os.listdir(temp_dir)
+['store1']
 >>> sorted(os.listdir(store_dir))
 ['cur', 'new', 'tmp']
 
@@ -91,6 +105,11 @@ Files can be copied, too:
 >>> filestore.list('tmp')
 ['.../tmp/a-file']
 
+Finally, files can be removed:
+
+>>> filestore.remove('a-file', 'cur')
+>>> filestore.list('cur')
+[]
 
 Cleanup
 =======
