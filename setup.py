@@ -6,7 +6,7 @@ import os.path
 
 setup(
     name='gocept.filestore',
-    version='0.4',
+    version='0.5.dev0',
     author='gocept gmbh & co. kg',
     author_email='mail@gocept.com',
     url='https://github.com/gocept/gocept.filestore',
