@@ -5,7 +5,7 @@ CHANGES
 0.5 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Use GitHub actions as CI.
 
 
 0.4 (2019-11-29)
@@ -13,7 +13,7 @@ CHANGES
 
 - Migrate repository to Bitbucket.
 
-- Migrate repository to github.
+- Migrate repository to GitHub.
 
 - Made Python 3 compatible (tested with Python 2.7, 3.7 and 3.8).
 
