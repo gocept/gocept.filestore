@@ -1,4 +1,3 @@
-# coding: UTF-8
 
 import gocept.filestore.interfaces
 import os
