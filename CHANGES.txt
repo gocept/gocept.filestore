@@ -5,6 +5,8 @@ CHANGES
 0.5 (unreleased)
 ----------------
 
+- Add support for Python 3,9, 3.10, 3.11.
+
 - Use GitHub actions as CI.
 
 
