@@ -1,9 +1,9 @@
 =======
-CHANGES
+Changes
 =======
 
 0.5 (unreleased)
-----------------
+================
 
 - Add support for Python 3,9, 3.10, 3.11.
 
@@ -11,7 +11,7 @@ CHANGES
 
 
 0.4 (2019-11-29)
-----------------
+================
 
 - Migrate repository to Bitbucket.
 
@@ -25,11 +25,11 @@ CHANGES
 
 
 0.3 (2009-10-08)
-----------------
+================
 
 - Added copy() method.
 
 0.2 (2007-08-30)
-----------------
+================
 
 - Initial public release.

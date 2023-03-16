@@ -3,6 +3,11 @@ from setuptools import setup
 import os.path
 
 
+def read(*path):
+    with open(os.path.join(*path)) as f:
+        return f.read()
+
+
 setup(
     name='gocept.filestore',
     version='0.5.dev0',
@@ -10,9 +15,11 @@ setup(
     author_email='mail@gocept.com',
     url='https://github.com/gocept/gocept.filestore',
     description="Provides maildir like access to files",
-    long_description=open(os.path.join(os.path.dirname(__file__),
-                                       'src', 'gocept', 'filestore',
-                                       'README.txt')).read(),
+    long_description='.. contents::\n\n'
+        + read(os.path.dirname(__file__), 'src', 'gocept', 'filestore',
+               'README.txt')
+        + '\n\n'
+        + read('CHANGES.txt'),
     license="ZPL 2.1",
     classifiers=[
         'License :: OSI Approved',
@@ -34,7 +41,7 @@ setup(
         'Topic :: Software Development :: Libraries',
         'Topic :: Software Development :: Libraries :: Python Modules',
         'Topic :: Utilities',
-    ],
+            ],
     keywords='filesystem consistency',
     packages=find_packages('src'),
     package_dir={'': 'src'},
@@ -45,10 +52,10 @@ setup(
         'setuptools',
         'zope.deferredimport',
         'zope.interface',
-    ],
+            ],
     extras_require={
         'test': [
             'zope.testing',
             'zope.testrunner'],
-    },
+            },
 )
