@@ -3,4 +3,8 @@ include *.txt
 include buildout.cfg
 include tox.ini
 include .coveragerc
+
+include .pre-commit-config.yaml
+exclude .pre-commit-config.yaml
+
 recursive-include src *.txt
