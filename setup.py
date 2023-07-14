@@ -10,7 +10,7 @@ def read(*path):
 
 setup(
     name='gocept.filestore',
-    version='0.6.dev0',
+    version='1.0.dev0',
     author='gocept gmbh & co. kg',
     author_email='mail@gocept.com',
     url='https://github.com/gocept/gocept.filestore',
@@ -25,8 +25,6 @@ setup(
         'License :: OSI Approved',
         'License :: OSI Approved :: Zope Public License',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
@@ -48,6 +46,7 @@ setup(
     include_package_data=True,
     zip_safe=False,
     namespace_packages=['gocept'],
+    python_requires='>=3.7',
     install_requires=[
         'setuptools',
         'zope.deferredimport',

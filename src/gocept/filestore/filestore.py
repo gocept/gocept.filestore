@@ -1,4 +1,3 @@
-
 import gocept.filestore.interfaces
 import os
 import os.path
@@ -7,7 +6,7 @@ import zope.interface
 
 
 @zope.interface.implementer(gocept.filestore.interfaces.IFileStore)
-class FileStore(object):
+class FileStore:
 
     sub_dirs = ('tmp', 'new', 'cur')
 
